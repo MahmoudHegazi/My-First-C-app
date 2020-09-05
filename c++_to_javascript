@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+
+<p>Pleae enter your birthdate year to get your old</p>
+
+<form>
+<input type="number"  id="year" required="required">
+<input type="button" onclick="getage()" value="Get Your Age">
+</form>
+<script>
+
+function getage() {
+let user_birthdate = document.getElementById("year");
+if (user_birthdate.value < 2016 && user_birthdate.value != '' && user_birthdate.value > 1960) {
+let d = new Date();
+let current_year = d.getFullYear();
+let user_age = current_year - user_birthdate.value;
+alert("Your Age Is " + user_age);
+} else {
+  alert('Sorry You Entered wrong Value or empty value');
+}
+}
+</script>
+</body>
+</html>
